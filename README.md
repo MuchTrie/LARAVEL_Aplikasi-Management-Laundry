@@ -4,13 +4,6 @@
 
 Aplikasi Management Laundry berbasis Laravel 9 untuk mengelola usaha laundry dengan fitur manajemen transaksi, pelanggan, dan layanan.
 
-## Preview Screenshots
-
-### Website Preview
-![Website Preview](public/img/ss/screencapture-127-0-0-1-8000-2025-08-25-09_17_18.png)
-
-*Aplikasi ini menampilkan landing page modern dengan desain futuristik dan fitur manajemen laundry yang lengkap.*
-
 ## Login Admin
 - Email : admin@laundryxyz.com  
 - Password : admin123
@@ -84,3 +77,12 @@ Aplikasi Management Laundry berbasis Laravel 9 untuk mengelola usaha laundry den
    ```
 
 10. Akses aplikasi di browser: http://localhost:8000
+
+
+
+## Preview Screenshots
+
+### Website Preview
+![Website Preview](public/img/ss/screencapture-127-0-0-1-8000-2025-08-25-09_17_18.png)
+
+*Aplikasi ini menampilkan landing page modern dengan desain futuristik dan fitur manajemen laundry yang lengkap.*
