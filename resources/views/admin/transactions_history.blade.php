@@ -13,7 +13,9 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Riwayat Transaksi</h1>
+                    <h1 class="m-0 admin-title">
+                        <i class="fas fa-history"></i> Riwayat Transaksi
+                    </h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -23,13 +25,20 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <div class="card">
+                    <div class="modern-card admin-table-card">
+                        <div class="card-header-modern">
+                            <h3 class="card-title-modern">
+                                <i class="fas fa-filter"></i> Filter Riwayat Transaksi
+                            </h3>
+                        </div>
                         <div class="card-body">
                             <form action="" method="get">
                                 <div class="form-group row">
-                                    <label for="tahun" class="col-auto col-form-label">Tahun</label>
+                                    <label for="tahun" class="col-auto col-form-label modern-label">
+                                        <i class="fas fa-calendar-alt"></i> Tahun
+                                    </label>
                                     <div class="col-auto">
-                                        <select class="form-control" id="tahun" name="year">
+                                        <select class="form-control modern-input" id="tahun" name="year">
                                             @foreach ($years as $year)
                                                 @if ($year->tahun == $currentYear)
                                                     <option value="{{ $year->Tahun }}" selected>{{ $year->Tahun }}
@@ -40,9 +49,11 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                    <label for="bulan" class="col-auto col-form-label">Bulan</label>
+                                    <label for="bulan" class="col-auto col-form-label modern-label">
+                                        <i class="fas fa-calendar"></i> Bulan
+                                    </label>
                                     <div class="col-auto">
-                                        <select class="form-control" id="bulan" name="month">
+                                        <select class="form-control modern-input" id="bulan" name="month">
                                             @for ($i = 1; $i <= 12; $i++)
                                                 @if ($i == $currentMonth)
                                                     <option value="{{ $i }}" selected>

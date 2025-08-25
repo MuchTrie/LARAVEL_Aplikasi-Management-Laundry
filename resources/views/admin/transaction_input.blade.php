@@ -11,7 +11,9 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Input Transaksi</h1>
+                    <h1 class="m-0 admin-title">
+                        <i class="fas fa-plus-circle"></i> Input Transaksi
+                    </h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -22,28 +24,33 @@
             <div class="row">
                 <div class="col-12">
                     @if (session('error'))
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            {{ session('error') }}
+                        <div class="alert modern-alert-danger alert-dismissible fade show" role="alert">
+                            <i class="fas fa-exclamation-triangle"></i> {{ session('error') }}
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                     @elseif (session('warning'))
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            {{ session('warning') }}
+                        <div class="alert modern-alert-warning alert-dismissible fade show" role="alert">
+                            <i class="fas fa-exclamation-circle"></i> {{ session('warning') }}
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                     @elseif (session('success'))
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            {{ session('success') }}
+                        <div class="alert modern-alert-success alert-dismissible fade show" role="alert">
+                            <i class="fas fa-check-circle"></i> {{ session('success') }}
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                     @endif
-                    <div class="card">
+                    <div class="modern-card admin-form-card">
+                        <div class="card-header-modern">
+                            <h3 class="card-title-modern">
+                                <i class="fas fa-edit"></i> Form Input Transaksi Baru
+                            </h3>
+                        </div>
                         <div class="card-body">
                             <form action="{{ route('admin.transactions.session.store') }}" method="post">
                                 @csrf
