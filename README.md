@@ -97,6 +97,12 @@ Aplikasi Management Laundry berbasis Laravel 9 untuk mengelola usaha laundry den
 
 ## Preview Screenshots
 
-### Website Preview
-![Website Preview](public/img/ss/screencapture-127-0-0-1-8000-2025-08-25-09_17_18.png)
+### Landing Page
+![Landing Page](public/img/preview/1.png)
+
+### Dashboard Admin
+![Dashboard Admin](public/img/preview/2.png)
+
+### Admin Features
+![Admin Features](public/img/preview/3.png)
 
