@@ -8,19 +8,35 @@
 
     <title>{{ config('app.name') }} - Admin</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="{{ asset('img/landing/logo.jpg') }}">
+    <link rel="shortcut icon" type="image/jpeg" href="{{ asset('img/landing/logo.jpg') }}">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/css/adminlte.min.css') }}">
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
-    <!-- Google Font: Nunito -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="{{ asset('css/landing-modern.css') }}" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     @yield('css')
     @routes('admin')
 </head>
 
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini admin-modern-theme">
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -49,8 +65,10 @@
         <!-- /.content-wrapper -->
 
         <!-- Main Footer -->
-        <footer class="main-footer">
-            Copyright &copy; 2022 {{ config('app.name') }} All rights reserved.
+        <footer class="main-footer modern-footer-admin">
+            <div class="text-center">
+                <strong>Copyright &copy; 2025 {{ config('app.name') }}</strong> - Modern Laundry Management System
+            </div>
         </footer>
     </div>
     <!-- ./wrapper -->
@@ -70,6 +88,30 @@
     <!-- AdminLTE App -->
     <script src="{{ asset('vendor/adminlte/js/adminlte.min.js') }}"></script>
     <script src="{{ asset('js/myscript.js') }}"></script>
+
+    <!-- JavaScript for Modern Effects -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simple particle animation (reduced frequency for admin)
+            function createParticle() {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.width = Math.random() * 1.5 + 0.5 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particle.style.opacity = '0.3';
+                document.getElementById('particles').appendChild(particle);
+                
+                setTimeout(() => {
+                    particle.remove();
+                }, 20000);
+            }
+
+            // Very reduced particle frequency for admin dashboard
+            setInterval(createParticle, 3000);
+        });
+    </script>
 
     @yield('scripts')
 
